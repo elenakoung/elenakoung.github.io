@@ -6,23 +6,23 @@
     <description>Recent content in Projects on Elena Koung</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 01 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Project 1</title>
       <link>/project/project1/</link>
-      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 08 May 2021 00:00:00 +0000</pubDate>
       
       <guid>/project/project1/</guid>
-      <description> Test Project 1  </description>
+      <description>Introduction I chose to examine my Spotify listening data by combining my music streaming history. I acquired this data easily by requesting it through Spotify and waiting a few days and it was emailed to me in a .zip folder. My two datasets (StreamingHistory0 and StreamingHistory1) are identical in structure and the variables I see are endTime, artistName, trackName, and msPlayed. While this is just 4 variables, I can split endTime into year, month, day, and time (hour and minute) to examine more numerical variables to fit the rubric.</description>
     </item>
     
     <item>
       <title>Project 2</title>
       <link>/project/project2/</link>
-      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 08 May 2021 00:00:00 +0000</pubDate>
       
       <guid>/project/project2/</guid>
-      <description> Test Project 2  </description>
+      <description>Introduction This is a fun dataset and I’m really excited to explore the techniques we learned in class on it. I got this dataset off of Kaggle after looking for esports related data. I am a long time gamer and want to apply my statistical analysis skills to my passion: esports. As someone who has participated and won a variety of tournaments, this dataset contains data that describes the game, its total tournaments, the total payouts, and how many winners for each game.</description>
     </item>
     
   </channel>
