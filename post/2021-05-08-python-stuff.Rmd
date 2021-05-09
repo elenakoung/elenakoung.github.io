@@ -1,0 +1,41 @@
+---
+title: Python stuff
+author: 'Elena Koung'
+date: '2021-05-08'
+slug: python-stuff
+categories: []
+tags: []
+description: 'here I demonstrate basic Python knowledge'
+---
+
+```{r }
+library(reticulate)
+rtalk <- "this is R :)"
+
+```
+
+```{python}
+ptalk = "this is Python >:)"
+print(r.rtalk,ptalk)
+
+```
+
+And this shows that R does the same thing, so the message is the same.
+
+```{r }
+cat(c(rtalk,py$ptalk))
+```
+
+```{python}
+
+for i in range(3):
+  print("I love stats!!")
+
+```
+This is a picture of my dog, his name is Tofu and he is 10 weeks old in this picture. 
+![](/post/2021-05-08-python-stuff_files/TOFU3.png)
+
+
+
+
+

@@ -18,5 +18,15 @@ Link to google
 summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.:19.0 3rd Qu.: 56.00 ## Max. :25.0 Max. :120.00 fit &amp;lt;- lm(dist ~ speed, data = cars) fit ## ## Call: ## lm(formula = dist ~ speed, data = cars) ## ## Coefficients: ## (Intercept) speed ## -17.</description>
     </item>
     
+    <item>
+      <title>Python stuff</title>
+      <link>/post/2021/05/08/python-stuff/</link>
+      <pubDate>Sat, 08 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2021/05/08/python-stuff/</guid>
+      <description>library(reticulate) rtalk &amp;lt;- &amp;quot;this is R :)&amp;quot; ptalk = &amp;quot;this is Python &amp;gt;:)&amp;quot; print(r.rtalk,ptalk) ## this is R :) this is Python &amp;gt;:) And this shows that R does the same thing, so the message is the same.
+cat(c(rtalk,py$ptalk)) ## this is R :) this is Python &amp;gt;:)  for i in range(3): print(&amp;quot;I love stats!!&amp;quot;) ## I love stats!! ## I love stats!! ## I love stats!! This is a picture of my dog, his name is Tofu and he is 10 weeks old in this picture.</description>
+    </item>
+    
   </channel>
 </rss>
