@@ -47,6 +47,15 @@ cat(c(rtalk,py$ptalk)) ## this is R :) this is Python &amp;gt;:)  for i in range
     </item>
     
     <item>
+      <title>Final Project for Statistical Learning and Inference</title>
+      <link>/project/project3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/project/project3/</guid>
+      <description>    </description>
+    </item>
+    
+    <item>
       <title>Projects</title>
       <link>/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -55,6 +64,7 @@ cat(c(rtalk,py$ptalk)) ## this is R :) this is Python &amp;gt;:)  for i in range
       <description> Check out some of my coding projects below:
  Wrangling &amp;amp; Exploratory Data Analysis
  Modeling, Inference, Prediction
+ Analyzing Asian Restaurant Data
   -- </description>
     </item>
     

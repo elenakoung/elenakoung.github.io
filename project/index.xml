@@ -25,5 +25,14 @@
       <description>Introduction This is a fun dataset and I’m really excited to explore the techniques we learned in class on it. I got this dataset off of Kaggle after looking for esports related data. I am a long time gamer and want to apply my statistical analysis skills to my passion: esports. As someone who has participated and won a variety of tournaments, this dataset contains data that describes the game, its total tournaments, the total payouts, and how many winners for each game.</description>
     </item>
     
+    <item>
+      <title>Final Project for Statistical Learning and Inference</title>
+      <link>/project/project3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/project/project3/</guid>
+      <description>    </description>
+    </item>
+    
   </channel>
 </rss>
