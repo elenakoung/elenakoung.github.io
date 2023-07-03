@@ -1,0 +1,1 @@
+hello i just deleted the old elenakoung repo and i feel kind of bad about it like ill never see it again maybe i shouldnt have done that but i hope it will be fine because this one will be even better than the last one (he lives in my brain)
