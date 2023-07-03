@@ -4,3 +4,39 @@
   font-family: 'Noto Serif SC', serif;
 }
 
+* {box-sizing: border-box}
+body, html {
+  height: 98%;
+  margin: 0;
+  font-family: Arial;
+}
+.tablink {
+  background-color: #F5D9C8;
+  color:#805033 ;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 20%;
+}
+
+.tablink:hover {
+  background-color: #B7A9D4;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color:#7D4550;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#About {background-color: #F5F5DD;}
+#Gaming {background-color: #F5F5DD;}
+#Contact {background-color: #F5F5DD;}
+#Stuff {background-color: #F5F5DD;}
+#Food {background-color: #F5F5DD;}
+

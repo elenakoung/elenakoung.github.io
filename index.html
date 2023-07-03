@@ -1,7 +1,7 @@
 <html>
 
 <head>
-<title>This is Elena Koung</title>
+<title>Elena's Mind</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&display=swap" rel="stylesheet">
@@ -9,26 +9,71 @@
 </head>
 
 <body>
-<div class- "main">
   
-  <nav>
-    <div class="logo">
-      <img src="images/logo.gif" width="40" 
-     height="40">
-    </div>
-    <div class="nav-links">
-      
-    <ul>
-      <li><a href="#">Resume</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Art</a></li>
-      <li><a href="#">Blog</a></li>
-    </ul>
-    </div>
+<p>Elena Koung ♕ 孔繁瑄 ♕  Tiaras</p>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+</style>
+</head>
+
+<body>
+
+<button class="tablink" onclick="openPage('About')" id="defaultOpen">About</button>
+<button class="tablink" onclick="openPage('Gaming')">Gaming</button>
+<button class="tablink" onclick="openPage('Food')">Food</button>
+<button class="tablink" onclick="openPage('Stuff')">Stuff</button>
+<button class="tablink" onclick="openPage('Contact')">Contact</button>
+
+
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>About me! CV and background and fun facts</p>
+</div>
+
+<div id="Gaming" class="tabcontent">
+  <h3>Gaming</h3>
+  <p>Some clips of my gameplay and questions i want to investigate in gaming</p> 
+</div>
+
+<div id="Food" class="tabcontent">
+  <h3>Food</h3>
+  <p>food projects, recipes and reviews</p>
+</div>
+
+<div id="Stuff" class="tabcontent">
+  <h3>Other Stuff</h3>
+  <p>placeholder</p>
+</div>
+
+
+<div id="Contact" class="tabcontent">
+  <h3>Contact</h3>
+  <p>email, discord, linkedin, twitter, instagram</p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+document.getElementById("defaultOpen").click();
+</script>
+   
   </nav>
 </div>
 
-<p>Elena Koung is 孔繁瑄</p>
+
 
 
 </body>
