@@ -27,6 +27,7 @@ body, html {
 }
 
 .tabcontent {
+  background-color: #b3c3ff;
   color: #7D4550;
   padding: 100px 20px;
   height: 100%;
