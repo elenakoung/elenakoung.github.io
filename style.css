@@ -28,30 +28,19 @@ body, html {
 
 .tabcontent {
   color: #7D4550;
-  display: none;
   padding: 100px 20px;
   height: 100%;
-}
-.DivToScroll{   
-    background-color: #F5F5F5;
-    border: 1px solid #DDDDDD;
-    border-radius: 4px 0 4px 0;
-    color: #3B3C3E;
-    font-size: 12px;
-    font-weight: bold;
-    left: -1px;
-    padding: 10px 7px 5px;
+
 }
 
-.DivWithScroll{
-    height:120px;
-    overflow:scroll;
-    overflow-x:hidden;
-}
-
-#About {background-color: #F5F5DD;} 
-#Research {background-color: #e9ddf5; height: 100%;}
-#Contact {background-color: #e9ddf5;}
-#Clips {background-color: #e9ddf5;}
-#Personal {background-color: #e9ddf5;}
+#About {background-color: #F5F5DD; height: auto !important;
+    min-height: 100%;} 
+#Research {background-color: #e9ddf5; height: auto !important;
+    min-height: 100%;}
+#Contact {background-color: #e9ddf5; height: auto !important;
+    min-height: 100%;}
+#Clips {background-color: #e9ddf5; height: auto !important;
+    min-height: 100%;}
+#Personal {background-color: #e9ddf5; height: auto !important;
+    min-height: 100%;}
 
