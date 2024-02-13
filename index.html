@@ -83,7 +83,7 @@ function openPage(pageName,elmnt,color) {
    for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
    }
-  document.getElementById("defaultOpen").click();
+  document.getElementById(pageName).click();
   evt.currentTarget.className += " active";
 }
 
