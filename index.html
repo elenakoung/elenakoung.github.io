@@ -80,11 +80,14 @@ function openPage(pageName,elmnt,color) {
     tabcontent[i].style.display = "none";
   }
   tablinks = document.getElementsByClassName("tablink");
-   for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
    }
-document.getElementById("defaultOpen").click();
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
 }
+document.getElementById("defaultOpen").click();
+
 </script>
 </body>
 </html>
