@@ -2,7 +2,7 @@
   margin: 0;
   padding: 10;
   font-family: 'Noto Serif SC', serif;
-  color: #187795
+  color: #020402;
   background-color: #f5f0ff;
 }
 
@@ -12,9 +12,13 @@ body, html {
   margin: 0;
 
 }
+
+h3 {
+  color: #DF57BC;
+}
 .tablink {
   background-color: #f3f0ff;
-  color: #187795;
+  color: #020402;
   float: left;
   border: none;
   outline: none;
@@ -29,7 +33,7 @@ body, html {
 }
 
 .tabcontent {
-  color: #7D4550;
+  color: #DF57BC;
   padding: 100px 20px;
   height: 100%;
 
