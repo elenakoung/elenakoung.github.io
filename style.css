@@ -16,9 +16,10 @@ body, html {
 h3 {
   color: #DF57BC;
 }
+
 .tablink {
-  background-color: #f3f0ff;
-  color: #020402;
+  background-color: #E9DDF5;
+  color: #187795;
   float: left;
   border: none;
   outline: none;
