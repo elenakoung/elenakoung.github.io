@@ -17,7 +17,6 @@
 </style>
 </head>
 
-<body>
 
 <button class="tablink" onclick="openPage('About')" id="defaultOpen">About</button>
 <button class="tablink" onclick="openPage('Gaming')">Gaming</button>
@@ -119,10 +118,10 @@ function openPage(pageName,elmnt,color) {
   }
   tablinks = document.getElementsByClassName("tablink");
   for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
+    tablinks[i].style.backgroundColor = "green";
   }
   document.getElementById(pageName).style.display = "block";
-  elmnt.style.backgroundColor = color;
+  elmnt.style.backgroundColor = "lightblue";
 }
 document.getElementById("defaultOpen").click();
 </script>
