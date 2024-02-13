@@ -16,14 +16,15 @@
 <style>
 </style>
 </head>
+</body>
 
-
+<body>
 <button class="tablink" onclick="openPage('About')" id="defaultOpen">About</button>
 <button class="tablink" onclick="openPage('Gaming')">Gaming</button>
 <button class="tablink" onclick="openPage('Food')">Food</button>
 <button class="tablink" onclick="openPage('Stuff')">Stuff</button>
 <button class="tablink" onclick="openPage('Contact')">Contact</button>
-
+</body>
 
 
 <div id="About" class="tabcontent">
@@ -109,6 +110,37 @@ Test Twitter embed
   <p>email, discord, linkedin, twitter, instagram</p>
 </div>
 
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+  
+.tab button.active {
+  background-color: #ccc;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+  
 <script>
 function openPage(pageName,elmnt,color) {
   var i, tabcontent, tablinks;
@@ -117,13 +149,13 @@ function openPage(pageName,elmnt,color) {
     tabcontent[i].style.display = "none";
   }
   tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "green";
-  }
-  document.getElementById(pageName).style.display = "block";
-  elmnt.style.backgroundColor = "lightblue";
+   for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+   }
+  document.getElementById("defaultOpen").click();
+  evt.currentTarget.className += " active";
 }
-document.getElementById("defaultOpen").click();
+
 </script>
    
   </nav>
