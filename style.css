@@ -3,6 +3,7 @@
   padding: 10;
   font-family: 'Noto Serif SC', serif;
   color: #187795
+  background-color: #f5f0ff;
 }
 
 * {box-sizing: border-box}
@@ -12,6 +13,7 @@ body, html {
 
 }
 .tablink {
+  background-color: #f3f0ff;
   color: #187795;
   float: left;
   border: none;
@@ -23,25 +25,24 @@ body, html {
 }
 
 .tablink:hover {
-  background-color: #e9ddf5;
+  background-color: #B3C3FF;
 }
 
 .tabcontent {
-  background-color: #b3c3ff;
   color: #7D4550;
   padding: 100px 20px;
   height: 100%;
 
 }
 
-#About {background-color: #B7A9D4; height: auto !important;
+#About {background-color: #E9DDF5; height: auto !important;
     min-height: 100%;} 
-#Research {background-color: #B7A9D4; height: auto !important;
+#Research {background-color: #E9DDF5; height: auto !important;
     min-height: 100%;}
-#Contact {background-color: #B7A9D4; height: auto !important;
+#Contact {background-color: #E9DDF5; height: auto !important;
     min-height: 100%;}
-#Clips {background-color: #B7A9D4; height: auto !important;
+#Clips {background-color: #E9DDF5; height: auto !important;
     min-height: 100%;}
-#Personal {background-color: #B7A9D4; height: auto !important;
+#Personal {background-color: #E9DDF5; height: auto !important;
     min-height: 100%;}
 
