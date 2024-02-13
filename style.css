@@ -12,14 +12,14 @@ body, html {
 }
 .tablink {
   background-color: #F5D9C8;
-  color:#805033 ;
+  color: #805033 ;
   float: left;
   border: none;
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
   font-size: 17px;
-  width: 100%;
+  width: 20%;
 }
 
 .tablink:hover {
@@ -27,14 +27,14 @@ body, html {
 }
 
 .tabcontent {
-  color:#7D4550;
+  color: #7D4550;
   display: none;
   padding: 100px 20px;
   height: 100%;
 }
 
 #About {background-color: #F5F5DD;} 
-#Gaming {background-color: #e9ddf5;}
+#Gaming {background-color: #e9ddf5; height: 100%;}
 #Contact {background-color: #e9ddf5;}
 #Stuff {background-color: #e9ddf5;}
 #Food {background-color: #e9ddf5;}
