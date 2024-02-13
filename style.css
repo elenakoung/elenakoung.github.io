@@ -2,16 +2,17 @@
   margin: 0;
   padding: 10;
   font-family: 'Noto Serif SC', serif;
+  color: #187795
 }
 
 * {box-sizing: border-box}
 body, html {
   height: 98%;
   margin: 0;
-  font-family: Arial;
+
 }
 .tablink {
-  color: #805033 ;
+  color: #187795;
   float: left;
   border: none;
   outline: none;
@@ -22,26 +23,25 @@ body, html {
 }
 
 .tablink:hover {
-  background-color: #B7A9D4;
+  background-color: #e9ddf5;
 }
 
 .tabcontent {
   background-color: #b3c3ff;
   color: #7D4550;
-  background-color: #b3c3ff;
   padding: 100px 20px;
   height: 100%;
 
 }
 
-#About {background-color: #F5F5DD; height: auto !important;
+#About {background-color: #B7A9D4; height: auto !important;
     min-height: 100%;} 
-#Research {background-color: #e9ddf5; height: auto !important;
+#Research {background-color: #B7A9D4; height: auto !important;
     min-height: 100%;}
-#Contact {background-color: #e9ddf5; height: auto !important;
+#Contact {background-color: #B7A9D4; height: auto !important;
     min-height: 100%;}
-#Clips {background-color: #e9ddf5; height: auto !important;
+#Clips {background-color: #B7A9D4; height: auto !important;
     min-height: 100%;}
-#Personal {background-color: #e9ddf5; height: auto !important;
+#Personal {background-color: #B7A9D4; height: auto !important;
     min-height: 100%;}
 
