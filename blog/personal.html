@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Personal and Blog | Elena Koung</title>
+<meta name="description" content="Blog posts by Elena Koung: research notes, UX project write-ups, and PhD reflections.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eaf3fb; --panel:#f7fbff; --line:#c5dbef; --ink:#12263f; --muted:#4a627c;
+  --accent:#2a68ad; --accent-soft:#d6e8f8;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --sans:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:4rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--sans)}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:2px}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1.25rem}
+header.nav{position:sticky;top:0;background:rgba(234,243,251,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:5}
+header.nav .wrap{display:flex;gap:1.2rem;flex-wrap:wrap;align-items:center;padding-top:.7rem;padding-bottom:.7rem}
+header.nav strong{font-family:var(--serif);font-size:1.1rem;margin-right:auto}
+header.nav strong a{color:var(--ink);text-decoration:none}
+header.nav nav a{font-size:.95rem;text-decoration:none;color:var(--muted);margin-left:1.1rem;padding-bottom:2px}
+header.nav nav a:first-child{margin-left:0}
+header.nav nav a:hover{color:var(--accent)}
+header.nav nav a[aria-current="page"]{color:var(--ink);border-bottom:2px solid var(--accent)}
+.hero{padding:3.5rem 0 2.5rem;display:grid;grid-template-columns:1fr 14rem;gap:2rem;align-items:start}
+.hero img{width:14rem;height:14rem;object-fit:cover;border-radius:50%;border:4px solid var(--panel)}
+@media (max-width:34rem){.hero{grid-template-columns:1fr}.hero img{order:-1;width:11rem;height:11rem}}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(2.6rem,8vw,4.2rem);line-height:1.02;margin:0 0 .4rem;letter-spacing:-.01em}
+h1.page{font-size:clamp(2rem,6vw,2.8rem);margin:0}
+.pagehead{padding:3rem 0 1.2rem}
+.pagehead p{margin:.6rem 0 0;color:var(--muted)}
+.zh{font-family:var(--serif);color:var(--accent);font-size:1.3rem;margin:0 0 1rem}
+.role{font-weight:500;margin:0 0 1.1rem}
+.lede{font-family:var(--serif);font-size:1.35rem;line-height:1.45;margin:0 0 1.2rem}
+.quick{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;margin:0;padding:0;list-style:none;font-size:.97rem}
+section{padding:2.2rem 0;border-top:1px solid var(--line)}
+h2{font-family:var(--serif);font-weight:600;font-size:1.6rem;margin:0 0 1rem}
+h3{font-size:1.02rem;font-weight:600;margin:1.6rem 0 .3rem}
+.topics{list-style:none;margin:0;padding:0;display:grid;gap:.6rem}
+.topics li{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--accent);padding:.7rem 1rem;border-radius:4px}
+.topics a{font-weight:500}
+.pub,.plain,.tl{list-style:none;margin:0;padding:0}
+.paper{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:1rem 1.2rem;margin:0 0 1rem}
+.paper p{margin:.6rem 0 0}
+.t{font-weight:600}
+.v,.d{color:var(--muted);font-size:.96rem}
+.d{display:block}
+.badge{display:inline-block;background:var(--accent-soft);color:var(--ink);font-size:.88rem;font-weight:500;padding:.1rem .55rem;border-radius:3px;margin-top:.4rem}
+.plain li{padding:.5rem 0}
+.news li{padding:.8rem 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:7.5rem 1fr;gap:1rem}
+.news li:last-child{border-bottom:0}
+.news time{color:var(--accent);font-weight:600;font-size:.95rem}
+@media (max-width:34rem){.news li{grid-template-columns:1fr;gap:.1rem}}
+.tl li{position:relative;padding:0 0 1.4rem 1.4rem;border-left:2px solid var(--line)}
+.tl li::before{content:"";position:absolute;left:-6px;top:.45rem;width:10px;height:10px;border-radius:50%;background:var(--accent)}
+.tl ul{margin:.3rem 0 0;padding-left:1.1rem}
+.tl li li{border:0;padding:0;position:static}
+.tl li li::before{display:none}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.92rem;border-top:1px solid var(--line)}
+
+.post{padding:1.5rem 0 3rem}
+.post h2{font-size:1.4rem;margin:2rem 0 .6rem}
+.post h3{font-family:var(--serif);font-size:1.3rem;margin:2rem 0 .6rem}
+.post h4{font-size:1.05rem;margin:1.6rem 0 .3rem}
+.post img,.post video{max-width:100%;height:auto;border-radius:4px;display:block;margin:1rem 0}
+.post blockquote{margin:1rem 0;padding:0}
+.post hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.post .meta{color:var(--muted);font-size:.95rem;margin:.4rem 0 0}
+.back{display:inline-block;margin-top:1.5rem;font-size:.95rem}
+.posts{list-style:none;margin:0;padding:0}
+.posts li{padding:1rem 0;border-bottom:1px solid var(--line)}
+.posts li:last-child{border-bottom:0}
+.posts time{display:block;color:var(--muted);font-size:.9rem}
+.posts a.pt{font-family:var(--serif);font-size:1.25rem;font-weight:600}
+.posts p{margin:.3rem 0 0}
+.clip{background:var(--panel);border:1px solid var(--line);border-radius:4px;margin:0 0 .7rem;overflow:hidden}
+.clip summary{cursor:pointer;list-style:none;padding:.7rem 1rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;font-weight:500}
+.clip summary::-webkit-details-marker{display:none}
+.clip summary .ct{color:var(--accent);transition:transform .15s}
+.clip[open] summary .ct{transform:rotate(180deg)}
+.clip .d{display:block;font-weight:400}
+.clip .embed{padding:0 1rem 1rem}
+.clip .embed a{font-size:.92rem}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <strong><a href="index.html">Elena Koung</a></strong>
+  <nav aria-label="Main"><a href="index.html">Home</a><a href="research.html">Research</a><a href="news.html">News</a><a href="cv.html">CV</a><a href="personal.html" aria-current="page">Personal</a></nav>
+</div></header>
+<main class="wrap">
+<div class="pagehead">
+  <h1 class="page">Personal</h1>
+  <p>Research notes, project write-ups, and reflections, plus some gameplay.</p>
+</div>
+
+<section id="blog">
+  <h2>Blog</h2>
+  <ul class="posts">
+    <li>
+      <time datetime="2026-07-09">July 9, 2026</time>
+      <a class="pt" href="blog/being-a-phd-intern-at-google.html">Being a PhD Intern at Google</a>
+      <p>Expectations, reality, and what I'm still learning from interning on Google's People Analytics team.</p>
+    </li>
+    <li>
+      <time datetime="2026-04-29">April 29, 2026</time>
+      <a class="pt" href="blog/concluding-2nd-year-phd.html">Concluding 2nd year PhD</a>
+      <p>Reflecting on milestones from my second year, including my first CHI paper and an internship offer from Google.</p>
+    </li>
+    <li>
+      <time datetime="2026-04-25">April 25, 2026</time>
+      <a class="pt" href="blog/chi-2026-reflections.html">CHI 2026 Reflections</a>
+      <p>Notes from my first CHI: being a student volunteer, a first-time presenter, and finding academic community.</p>
+    </li>
+    <li>
+      <time datetime="2026-02-10">February 10, 2026</time>
+      <a class="pt" href="blog/good-fortune-and-the-fire-horse.html">Good Fortune and the Fire Horse</a>
+      <p>Good news early in 2026: my second first-authored paper accepted to CHI 2026, and an internship offer from Google.</p>
+    </li>
+    <li>
+      <time datetime="2026-01-20">January 20, 2026</time>
+      <a class="pt" href="blog/report-a-player-league-of-legends-gendered-toxicity.html">To “Report A Player” on League of Legends for Gendered Toxicity</a>
+      <p>Reporting a player on League of Legends is important for competitive integrity.</p>
+    </li>
+    <li>
+      <time datetime="2026-01-18">January 18, 2026</time>
+      <a class="pt" href="blog/usability-testing-spotify-music-discovery.html">Usability Testing for Spotify Music Discovery</a>
+      <p>As part of a mixed-method usability study, my team (Team User Listeners) evaluated how effectively Spotify’s features help users find, understand, and explore new content.</p>
+    </li>
+    <li>
+      <time datetime="2025-12-11">December 11, 2025</time>
+      <a class="pt" href="blog/fighting-youtube-spam-with-machine-learning.html">Fighting YouTube Spam with Machine Learning</a>
+      <p>For this project, I developed a machine learning pipeline to automatically classify YouTube music video comments as spam or not spam.</p>
+    </li>
+    <li>
+      <time datetime="2025-11-30">November 30, 2025</time>
+      <a class="pt" href="blog/building-safer-esports-ecosystems-team-liquid.html">Building Safer Esports Ecosystems: Reflections on Speaking with Team Liquid</a>
+      <p>This month, I had the incredible opportunity to join Team Liquid as a guest speaker.</p>
+    </li>
+    <li>
+      <time datetime="2025-10-29">October 29, 2025</time>
+      <a class="pt" href="blog/my-chi-play-presentation.html">My CHI Play Presentation</a>
+      <p>Video of my CHI PLAY presentation.</p>
+    </li>
+    <li>
+      <time datetime="2025-10-15">October 15, 2025</time>
+      <a class="pt" href="blog/cognitive-walkthrough-spotify-messages.html">A Cognitive Walkthrough of Spotify Messages</a>
+      <p>In this project, we wanted to investigate Spotify's recently added messages feature.</p>
+    </li>
+    <li>
+      <time datetime="2025-10-06">October 6, 2025</time>
+      <a class="pt" href="blog/the-passage-of-time.html">The Passage of Time: Self-doubt, Qualifying exam &amp; First paper acceptance</a>
+      <p>This is a reflection of my 1st year as a PhD student and is hopefully something I could look back at later to be entertained by.</p>
+    </li>
+    <li>
+      <time datetime="2025-08-02">August 2, 2025</time>
+      <a class="pt" href="blog/about-gendered-toxicity.html">About Gendered Toxicity</a>
+      <p>Today I received the final acceptance notification for my paper, Gendered Toxicity in Competitive Gaming: Women's Perceptions and Responses.</p>
+    </li>
+  </ul>
+</section>
+
+<section id="games">
+  <h2>Gameplay</h2>
+  <p>I started playing games in elementary school with Pokémon, and I have played League of Legends for over 10 years, including two years competitively. Some of my gameplay (click a title to preview and play):</p>
+
+  <details class="clip">
+    <summary>Ahri clip noticed by LegitKorea <span class="ct">▾</span></summary>
+    <div class="embed">
+      <span class="d">April 5, 2022</span>
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/settintiaras/status/1511447954086838274">View clip</a></p></blockquote>
+      <p><a href="https://twitter.com/settintiaras/status/1511447954086838274">View on X ↗</a></p>
+    </div>
+  </details>
+
+  <details class="clip">
+    <summary>My first ace <span class="ct">▾</span></summary>
+    <div class="embed">
+      <span class="d">September 30, 2021</span>
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/settintiaras/status/1443440793386209284">View clip</a></p></blockquote>
+      <p><a href="https://twitter.com/settintiaras/status/1443440793386209284">View on X ↗</a></p>
+    </div>
+  </details>
+
+  <details class="clip">
+    <summary>My Blitzcrank is pretty clean <span class="ct">▾</span></summary>
+    <div class="embed">
+      <span class="d">March 5, 2023</span>
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/settintiaras/status/1632519759211249665">View clip</a></p></blockquote>
+      <p><a href="https://twitter.com/settintiaras/status/1632519759211249665">View on X ↗</a></p>
+    </div>
+  </details>
+  <script>
+  document.querySelectorAll('.clip').forEach(function(d){
+    d.addEventListener('toggle', function(){
+      if(d.open && !window.__twttrLoaded){
+        window.__twttrLoaded = true;
+        var s = document.createElement('script');
+        s.src = 'https://platform.twitter.com/widgets.js';
+        s.async = true;
+        document.body.appendChild(s);
+      } else if (d.open && window.twttr && window.twttr.widgets){
+        window.twttr.widgets.load(d);
+      }
+    });
+  });
+  </script>
+</section>
+</main>
+<footer><div class="wrap">© Elena Koung</div></footer>
+</body>
+</html>
