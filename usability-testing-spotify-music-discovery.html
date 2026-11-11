@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Usability Testing for Spotify Music Discovery | Elena Koung</title>
+<meta name="description" content="As part of a mixed-method usability study, my team (Team User Listeners) evaluated how effectively Spotify’s features help users find, understand, and explore new content.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eaf3fb; --panel:#f7fbff; --line:#c5dbef; --ink:#12263f; --muted:#4a627c;
+  --accent:#2a68ad; --accent-soft:#d6e8f8;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --sans:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:4rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--sans)}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:2px}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1.25rem}
+header.nav{position:sticky;top:0;background:rgba(234,243,251,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:5}
+header.nav .wrap{display:flex;gap:1.2rem;flex-wrap:wrap;align-items:center;padding-top:.7rem;padding-bottom:.7rem}
+header.nav strong{font-family:var(--serif);font-size:1.1rem;margin-right:auto}
+header.nav strong a{color:var(--ink);text-decoration:none}
+header.nav nav a{font-size:.95rem;text-decoration:none;color:var(--muted);margin-left:1.1rem;padding-bottom:2px}
+header.nav nav a:first-child{margin-left:0}
+header.nav nav a:hover{color:var(--accent)}
+header.nav nav a[aria-current="page"]{color:var(--ink);border-bottom:2px solid var(--accent)}
+.hero{padding:3.5rem 0 2.5rem;display:grid;grid-template-columns:1fr 14rem;gap:2rem;align-items:start}
+.hero img{width:14rem;height:14rem;object-fit:cover;border-radius:50%;border:4px solid var(--panel)}
+@media (max-width:34rem){.hero{grid-template-columns:1fr}.hero img{order:-1;width:11rem;height:11rem}}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(2.6rem,8vw,4.2rem);line-height:1.02;margin:0 0 .4rem;letter-spacing:-.01em}
+h1.page{font-size:clamp(2rem,6vw,2.8rem);margin:0}
+.pagehead{padding:3rem 0 1.2rem}
+.pagehead p{margin:.6rem 0 0;color:var(--muted)}
+.zh{font-family:var(--serif);color:var(--accent);font-size:1.3rem;margin:0 0 1rem}
+.role{font-weight:500;margin:0 0 1.1rem}
+.lede{font-family:var(--serif);font-size:1.35rem;line-height:1.45;margin:0 0 1.2rem}
+.quick{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;margin:0;padding:0;list-style:none;font-size:.97rem}
+section{padding:2.2rem 0;border-top:1px solid var(--line)}
+h2{font-family:var(--serif);font-weight:600;font-size:1.6rem;margin:0 0 1rem}
+h3{font-size:1.02rem;font-weight:600;margin:1.6rem 0 .3rem}
+.topics{list-style:none;margin:0;padding:0;display:grid;gap:.6rem}
+.topics li{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--accent);padding:.7rem 1rem;border-radius:4px}
+.topics a{font-weight:500}
+.pub,.plain,.tl{list-style:none;margin:0;padding:0}
+.paper{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:1rem 1.2rem;margin:0 0 1rem}
+.paper p{margin:.6rem 0 0}
+.t{font-weight:600}
+.v,.d{color:var(--muted);font-size:.96rem}
+.d{display:block}
+.badge{display:inline-block;background:var(--accent-soft);color:var(--ink);font-size:.88rem;font-weight:500;padding:.1rem .55rem;border-radius:3px;margin-top:.4rem}
+.plain li{padding:.5rem 0}
+.news li{padding:.8rem 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:7.5rem 1fr;gap:1rem}
+.news li:last-child{border-bottom:0}
+.news time{color:var(--accent);font-weight:600;font-size:.95rem}
+@media (max-width:34rem){.news li{grid-template-columns:1fr;gap:.1rem}}
+.tl li{position:relative;padding:0 0 1.4rem 1.4rem;border-left:2px solid var(--line)}
+.tl li::before{content:"";position:absolute;left:-6px;top:.45rem;width:10px;height:10px;border-radius:50%;background:var(--accent)}
+.tl ul{margin:.3rem 0 0;padding-left:1.1rem}
+.tl li li{border:0;padding:0;position:static}
+.tl li li::before{display:none}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.92rem;border-top:1px solid var(--line)}
+
+.post{padding:1.5rem 0 3rem}
+.post h2{font-size:1.4rem;margin:2rem 0 .6rem}
+.post h3{font-family:var(--serif);font-size:1.3rem;margin:2rem 0 .6rem}
+.post h4{font-size:1.05rem;margin:1.6rem 0 .3rem}
+.post img,.post video{max-width:100%;height:auto;border-radius:4px;display:block;margin:1rem 0}
+.post blockquote{margin:1rem 0;padding:0}
+.post hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.post .meta{color:var(--muted);font-size:.95rem;margin:.4rem 0 0}
+.back{display:inline-block;margin-top:1.5rem;font-size:.95rem}
+.posts{list-style:none;margin:0;padding:0}
+.posts li{padding:1rem 0;border-bottom:1px solid var(--line)}
+.posts li:last-child{border-bottom:0}
+.posts time{display:block;color:var(--muted);font-size:.9rem}
+.posts a.pt{font-family:var(--serif);font-size:1.25rem;font-weight:600}
+.posts p{margin:.3rem 0 0}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <strong><a href="../index.html">Elena Koung</a></strong>
+  <nav aria-label="Main"><a href="../index.html">Home</a><a href="../research.html">Research</a><a href="../news.html">News</a><a href="../cv.html">CV</a><a href="../personal.html" aria-current="page">Personal</a></nav>
+</div></header>
+<main class="wrap">
+<div class="pagehead">
+  <h1 class="page">Usability Testing for Spotify Music Discovery</h1>
+  <p class="meta">January 18, 2026</p>
+</div>
+<article class="post">
+<p>Spotify is a powerhouse for music discovery, but even the best algorithmic ecosystems can be undermined by a <strong>"visibility crisis."</strong> As part of a mixed-method usability study, my team (Team User Listeners) evaluated how effectively Spotify’s features help users find, understand, and explore new content.</p>
+<h3>The Approach</h3>
+<p>We conducted a study using both <strong>moderated in-person sessions</strong> (3 participants) and <strong>unmoderated remote testing</strong> (6 participants). By combining guided insights with natural, unguided behavior, we tested three core pillars of discovery:</p>
+<ol>
+<li><strong>Finding "Radio" stations</strong> based on a favorite song.</li>
+<li><strong>Locating "Discover Weekly"</strong> for algorithmic recommendations.</li>
+<li><strong>Pre-saving</strong> an upcoming album release.</li>
+</ol>
+<h3>The "Steak Knife" Problem: Key Insights</h3>
+<p>Our research uncovered a significant gap between Spotify’s powerful features and user findability. One participant aptly described the interface as <strong>"a house that has no closets... they just shove everything on the floor in one room,"</strong> making specific tools as hard to find as a steak knife in a pile of clutter.</p>
+<ul>
+<li><strong>Hidden Pathways (Task 1):</strong> The "Radio" feature had a dismal <strong>11% success rate</strong>. Users rarely discovered that the only way to access a song-based radio station is through a buried overflow menu.</li>
+<li><strong>Naming Confusion (Task 2):</strong> Participants consistently confused "Discover Weekly" with "Weekly Mix," "Weekday Mix," or "New Music Friday". High interface clutter on the Home page led to excessive scrolling and "false completions" where users settled for the wrong playlist.</li>
+<li><strong>Information Overload (Task 3):</strong> While pre-saving albums had a higher success rate (56%), users struggled with inconsistent layouts across different devices and a high cognitive burden due to uniform design elements.</li>
+</ul>
+<h3>Strategic Recommendations</h3>
+<p>To bridge the gap between user intent and Spotify’s complex terminology, we proposed the following enhancements:</p>
+<ul>
+<li><strong>Implement Onboarding Walkthroughs:</strong> Introduce guided tips the first few times a user interacts with discovery features (e.g., "Tap here to start a similar playlist").</li>
+<li><strong>Align Terminology with Mental Models:</strong> Rename or add descriptors to the "Radio" feature—such as <strong>"Similar Songs Playlist"</strong>—to better match user expectations.</li>
+<li><strong>Surface a "Discovery Hub":</strong> Reduce cognitive load by grouping discovery features under a dedicated section, clearing the Home page of promotional clutter and ads.</li>
+<li><strong>Introduce an In-App Helper:</strong> A built-in agent (text or voice) could guide users to discovery features when they indicate a desire for "more songs like this".</li>
+</ul>
+<h3>The Impact</h3>
+<p>Spotify’s core listening experience is world-class, but its discovery features are currently <strong>underutilized due to UI friction</strong>. By simplifying pathways and standardizing naming conventions, Spotify can turn its discovery ecosystem from a "hidden gem" into a seamless daily habit, ultimately driving higher user retention and engagement.</p>
+<p><a href="https://sites.psu.edu/elenakoung/files/2026/07/SpotifyUsabilityTest_EK.pdf">Please take a look at our full report here!</a></p>
+<a class="back" href="../personal.html#blog">← All blog posts</a>
+</article>
+</main>
+<footer><div class="wrap">© Elena Koung</div></footer>
+</body>
+</html>

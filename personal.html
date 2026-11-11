@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Personal and Blog | Elena Koung</title>
-<meta name="description" content="Blog entries and personal notes from Elena Koung: games, food, and more.">
+<meta name="description" content="Blog posts by Elena Koung: research notes, UX project write-ups, and PhD reflections.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
@@ -30,9 +30,9 @@ header.nav nav a{font-size:.95rem;text-decoration:none;color:var(--muted);margin
 header.nav nav a:first-child{margin-left:0}
 header.nav nav a:hover{color:var(--accent)}
 header.nav nav a[aria-current="page"]{color:var(--ink);border-bottom:2px solid var(--accent)}
-.hero{padding:3.5rem 0 2.5rem;display:grid;grid-template-columns:1fr 9rem;gap:2rem;align-items:start}
-.hero img{width:9rem;height:9rem;object-fit:cover;border-radius:50%;border:4px solid var(--panel)}
-@media (max-width:34rem){.hero{grid-template-columns:1fr}.hero img{order:-1;width:7rem;height:7rem}}
+.hero{padding:3.5rem 0 2.5rem;display:grid;grid-template-columns:1fr 14rem;gap:2rem;align-items:start}
+.hero img{width:14rem;height:14rem;object-fit:cover;border-radius:50%;border:4px solid var(--panel)}
+@media (max-width:34rem){.hero{grid-template-columns:1fr}.hero img{order:-1;width:11rem;height:11rem}}
 h1{font-family:var(--serif);font-weight:600;font-size:clamp(2.6rem,8vw,4.2rem);line-height:1.02;margin:0 0 .4rem;letter-spacing:-.01em}
 h1.page{font-size:clamp(2rem,6vw,2.8rem);margin:0}
 .pagehead{padding:3rem 0 1.2rem}
@@ -65,6 +65,22 @@ h3{font-size:1.02rem;font-weight:600;margin:1.6rem 0 .3rem}
 .tl li li{border:0;padding:0;position:static}
 .tl li li::before{display:none}
 footer{padding:2rem 0 3rem;color:var(--muted);font-size:.92rem;border-top:1px solid var(--line)}
+
+.post{padding:1.5rem 0 3rem}
+.post h2{font-size:1.4rem;margin:2rem 0 .6rem}
+.post h3{font-family:var(--serif);font-size:1.3rem;margin:2rem 0 .6rem}
+.post h4{font-size:1.05rem;margin:1.6rem 0 .3rem}
+.post img,.post video{max-width:100%;height:auto;border-radius:4px;display:block;margin:1rem 0}
+.post blockquote{margin:1rem 0;padding:0}
+.post hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.post .meta{color:var(--muted);font-size:.95rem;margin:.4rem 0 0}
+.back{display:inline-block;margin-top:1.5rem;font-size:.95rem}
+.posts{list-style:none;margin:0;padding:0}
+.posts li{padding:1rem 0;border-bottom:1px solid var(--line)}
+.posts li:last-child{border-bottom:0}
+.posts time{display:block;color:var(--muted);font-size:.9rem}
+.posts a.pt{font-family:var(--serif);font-size:1.25rem;font-weight:600}
+.posts p{margin:.3rem 0 0}
 </style>
 </head>
 <body>
@@ -75,13 +91,53 @@ footer{padding:2rem 0 3rem;color:var(--muted);font-size:.92rem;border-top:1px so
 <main class="wrap">
 <div class="pagehead">
   <h1 class="page">Personal</h1>
-  <p>Games, food, and whatever else I feel like writing about.</p>
+  <p>Research notes, project write-ups, and reflections, plus some gameplay.</p>
 </div>
 
 <section id="blog">
   <h2>Blog</h2>
-  <!-- TODO: add blog entries here. Paste the posts from the Penn State Blog page (and the old GitHub "Random/Blog/Rant Style" section) and I'll format them as entries with dates. -->
-  <p class="v">Posts coming soon.</p>
+  <ul class="posts">
+    <li>
+      <time datetime="2026-01-20">January 20, 2026</time>
+      <a class="pt" href="blog/report-a-player-league-of-legends-gendered-toxicity.html">To “Report A Player” on League of Legends for Gendered Toxicity</a>
+      <p>Reporting a player on League of Legends is important for competitive integrity.</p>
+    </li>
+    <li>
+      <time datetime="2026-01-18">January 18, 2026</time>
+      <a class="pt" href="blog/usability-testing-spotify-music-discovery.html">Usability Testing for Spotify Music Discovery</a>
+      <p>As part of a mixed-method usability study, my team (Team User Listeners) evaluated how effectively Spotify’s features help users find, understand, and explore new content.</p>
+    </li>
+    <li>
+      <time datetime="2025-12-11">December 11, 2025</time>
+      <a class="pt" href="blog/fighting-youtube-spam-with-machine-learning.html">Fighting YouTube Spam with Machine Learning</a>
+      <p>For this project, I developed a machine learning pipeline to automatically classify YouTube music video comments as spam or not spam.</p>
+    </li>
+    <li>
+      <time datetime="2025-11-30">November 30, 2025</time>
+      <a class="pt" href="blog/building-safer-esports-ecosystems-team-liquid.html">Building Safer Esports Ecosystems: Reflections on Speaking with Team Liquid</a>
+      <p>This month, I had the incredible opportunity to join Team Liquid as a guest speaker.</p>
+    </li>
+    <li>
+      <time datetime="2025-10-29">October 29, 2025</time>
+      <a class="pt" href="blog/my-chi-play-presentation.html">My CHI Play Presentation</a>
+      <p>Video of my CHI PLAY presentation.</p>
+    </li>
+    <li>
+      <time datetime="2025-10-15">October 15, 2025</time>
+      <a class="pt" href="blog/cognitive-walkthrough-spotify-messages.html">A Cognitive Walkthrough of Spotify Messages</a>
+      <p>In this project, we wanted to investigate Spotify's recently added messages feature.</p>
+    </li>
+    <li>
+      <time datetime="2025-10-06">October 6, 2025</time>
+      <a class="pt" href="blog/the-passage-of-time.html">The Passage of Time: Self-doubt, Qualifying exam &amp; First paper acceptance</a>
+      <p>This is a reflection of my 1st year as a PhD student and is hopefully something I could look back at later to be entertained by.</p>
+    </li>
+    <li>
+      <time datetime="2025-08-02">August 2, 2025</time>
+      <a class="pt" href="blog/about-gendered-toxicity.html">About Gendered Toxicity</a>
+      <p>Today I received the final acceptance notification for my paper, Gendered Toxicity in Competitive Gaming: Women's Perceptions and Responses.</p>
+    </li>
+  </ul>
 </section>
 
 <section id="games">

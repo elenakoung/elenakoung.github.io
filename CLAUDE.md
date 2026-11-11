@@ -9,3 +9,4 @@ This is Elena Koung's professional site (PhD student, Penn State, Informatics/HC
 5. Keep the light blue theme (CSS variables in :root). Keep the page title, meta description, and JSON-LD in sync with new facts.
 6. After each edit, check the layout on a narrow screen, then summarize what changed.
 - Research summaries must paraphrase the paper's own abstract. Do not add findings that are not in the abstract.
+- Blog posts live in blog/ as individual pages. Posts are copied from Elena's WordPress export; keep her wording and dates exactly. Only publish posts she has marked published (drafts stay out).
