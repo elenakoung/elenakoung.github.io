@@ -58,6 +58,14 @@ h3{font-size:1.02rem;font-weight:600;margin:1.6rem 0 .3rem}
 .badge{display:inline-block;background:var(--accent-soft);color:var(--ink);font-size:.88rem;font-weight:500;padding:.1rem .55rem;border-radius:3px;margin-top:.4rem}
 .plain li{padding:.5rem 0}
 .news li{padding:.8rem 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:7.5rem 1fr;gap:1rem}
+.clips{display:flex;flex-direction:column;gap:.7rem}
+.clip{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:.2rem 1rem}
+.clip summary{cursor:pointer;padding:.7rem 0;display:flex;flex-wrap:wrap;gap:.5rem;align-items:baseline;list-style:none}
+.clip summary::-webkit-details-marker{display:none}
+.clip summary::before{content:"▶";font-size:.7rem;color:var(--accent);margin-right:.3rem}
+.clip[open] summary::before{content:"▼"}
+.clip summary .ct{color:var(--ink);font-weight:500}
+.clip .embed{padding:.8rem 0 1rem}
 .news li:last-child{border-bottom:0}
 .news time{color:var(--accent);font-weight:600;font-size:.95rem}
 @media (max-width:34rem){.news li{grid-template-columns:1fr;gap:.1rem}}
@@ -144,13 +152,39 @@ footer{padding:2rem 0 3rem;color:var(--muted);font-size:.92rem;border-top:1px so
 
 <section id="games">
   <h2>Gameplay</h2>
-  <p>I started playing games in elementary school with Pokémon, and I have played League of Legends for over 10 years, including two years competitively. Some of my gameplay:</p>
-  <ul class="plain">
-    <li><a href="https://twitter.com/settintiaras/status/1511447954086838274">Ahri clip noticed by LegitKorea</a> <span class="d">April 5, 2022</span></li>
-    <li><a href="https://twitter.com/settintiaras/status/1443440793386209284">My first ace</a> <span class="d">September 30, 2021</span></li>
-    <li><a href="https://twitter.com/settintiaras/status/1632519759211249665">My Blitzcrank is pretty clean</a> <span class="d">March 5, 2023</span></li>
-  </ul>
+  <p>I started playing games in elementary school with Pokémon, and I have played League of Legends for over 10 years, including two years competitively. Some of my gameplay — click a clip to preview and play:</p>
+  <div class="clips">
+    <details class="clip" ontoggle="this.open && loadClip(this,'1511447954086838274')">
+      <summary><span class="ct">Ahri clip noticed by LegitKorea</span> <span class="d">April 5, 2022</span></summary>
+      <div class="embed"><a href="https://twitter.com/settintiaras/status/1511447954086838274">View on X ↗</a></div>
+    </details>
+    <details class="clip" ontoggle="this.open && loadClip(this,'1443440793386209284')">
+      <summary><span class="ct">My first ace</span> <span class="d">September 30, 2021</span></summary>
+      <div class="embed"><a href="https://twitter.com/settintiaras/status/1443440793386209284">View on X ↗</a></div>
+    </details>
+    <details class="clip" ontoggle="this.open && loadClip(this,'1632519759211249665')">
+      <summary><span class="ct">My Blitzcrank is pretty clean</span> <span class="d">March 5, 2023</span></summary>
+      <div class="embed"><a href="https://twitter.com/settintiaras/status/1632519759211249665">View on X ↗</a></div>
+    </details>
+  </div>
 </section>
+<script>
+function loadClip(detailsEl,id){
+  var box=detailsEl.querySelector('.embed');
+  if(box.dataset.loaded)return;
+  box.dataset.loaded='1';
+  box.innerHTML='<blockquote class="twitter-tweet"><a href="https://twitter.com/settintiaras/status/'+id+'"></a></blockquote>';
+  if(window.twttr && window.twttr.widgets){
+    window.twttr.widgets.load(box);
+  } else if(!document.getElementById('twitter-wjs')){
+    var s=document.createElement('script');
+    s.id='twitter-wjs';
+    s.src='https://platform.twitter.com/widgets.js';
+    s.async=true;
+    document.body.appendChild(s);
+  }
+}
+</script>
 </main>
 <footer><div class="wrap">© Elena Koung</div></footer>
 </body>
