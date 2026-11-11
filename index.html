@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Elena Koung | PhD Student, Penn State | Teens, Discord, and Toxicity in Games</title>
-<meta name="description" content="Elena Koung is a PhD student at The Pennsylvania State University. Her research covers youth and Discord, online safety, toxicity in games, and gender and sexism in games.">
+<title>Elena Koung | HCI PhD Student, Penn State | Teens, Discord, and Toxicity in Games</title>
+<meta name="description" content="Elena Koung is an HCI PhD student in Informatics at Penn State and a member of the Health and Play Lab. Her research covers youth and Discord, online safety, toxicity in games, and gender and sexism in games.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
@@ -14,12 +14,17 @@
   "@type": "Person",
   "name": "Elena Koung",
   "alternateName": "孔繁瑄",
-  "jobTitle": "PhD Student",
+  "jobTitle": "PhD Student, Informatics (Human-Computer Interaction)",
+  "email": "mailto:elenakoung@psu.edu",
+  "image": "https://sites.psu.edu/elenakoung/files/2025/10/ELENA_KOUNG_SAB-Headshot_25-26-300x300.jpg",
   "affiliation": {"@type": "CollegeOrUniversity", "name": "The Pennsylvania State University"},
-  "knowsAbout": ["youth and Discord", "online safety", "toxicity in games", "gender and sexism in games", "human-computer interaction"],
+  "alumniOf": {"@type": "CollegeOrUniversity", "name": "The University of Texas at Austin"},
+  "knowsAbout": ["youth and Discord", "online safety", "toxicity in games", "gender and sexism in games", "human-computer interaction", "online communities"],
   "sameAs": [
     "https://scholar.google.com/citations?user=aCeNyEQAAAAJ",
-    "https://sites.psu.edu/elenakoung/"
+    "https://sites.psu.edu/elenakoung/",
+    "https://www.linkedin.com/in/elenakoung/",
+    "https://x.com/settintiaras"
   ]
 }
 </script>
@@ -31,52 +36,77 @@
   --sans:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:4rem}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--sans)}
 a{color:var(--accent);text-underline-offset:3px}
 a:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:2px}
 .wrap{max-width:46rem;margin:0 auto;padding:0 1.25rem}
 header.nav{position:sticky;top:0;background:rgba(234,243,251,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:5}
-header.nav .wrap{display:flex;gap:1.25rem;flex-wrap:wrap;align-items:center;padding-top:.7rem;padding-bottom:.7rem}
+header.nav .wrap{display:flex;gap:1.1rem;flex-wrap:wrap;align-items:center;padding-top:.7rem;padding-bottom:.7rem}
 header.nav strong{font-family:var(--serif);font-size:1.1rem;margin-right:auto}
-header.nav a{font-size:.95rem;text-decoration:none;color:var(--muted)}
+header.nav a{font-size:.93rem;text-decoration:none;color:var(--muted)}
 header.nav a:hover{color:var(--accent)}
-.hero{padding:4.5rem 0 2.5rem}
-h1{font-family:var(--serif);font-weight:600;font-size:clamp(2.6rem,8vw,4.4rem);line-height:1.02;margin:0 0 .5rem;letter-spacing:-.01em}
-.zh{font-family:var(--serif);color:var(--accent);font-size:1.35rem;margin:0 0 1.2rem}
-.role{font-weight:500;margin:0 0 1.2rem}
-.lede{font-family:var(--serif);font-size:1.4rem;line-height:1.45;max-width:36rem;margin:0}
+.hero{padding:3.5rem 0 2.5rem;display:grid;grid-template-columns:1fr 9rem;gap:2rem;align-items:start}
+.hero img{width:9rem;height:9rem;object-fit:cover;border-radius:50%;border:4px solid var(--panel)}
+@media (max-width:34rem){.hero{grid-template-columns:1fr}.hero img{order:-1;width:7rem;height:7rem}}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(2.6rem,8vw,4.2rem);line-height:1.02;margin:0 0 .4rem;letter-spacing:-.01em}
+.zh{font-family:var(--serif);color:var(--accent);font-size:1.3rem;margin:0 0 1rem}
+.role{font-weight:500;margin:0 0 1.1rem}
+.lede{font-family:var(--serif);font-size:1.35rem;line-height:1.45;margin:0 0 1.2rem}
+.quick{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;margin:0;padding:0;list-style:none;font-size:.97rem}
 section{padding:2.2rem 0;border-top:1px solid var(--line)}
 h2{font-family:var(--serif);font-weight:600;font-size:1.7rem;margin:0 0 1.1rem}
 h3{font-size:1.02rem;font-weight:600;margin:1.6rem 0 .3rem}
 .topics{list-style:none;margin:0;padding:0;display:grid;gap:.6rem}
 .topics li{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--accent);padding:.7rem 1rem;border-radius:4px}
-.pub{list-style:none;margin:0;padding:0}
+.pub,.plain,.tl{list-style:none;margin:0;padding:0}
 .pub li{padding:1rem 0;border-bottom:1px solid var(--line)}
 .pub li:last-child{border-bottom:0}
-.pub .t{font-weight:600}
-.pub .v{color:var(--muted);font-size:.97rem}
+.t{font-weight:600}
+.v,.d{color:var(--muted);font-size:.96rem}
+.d{display:block}
+.badge{display:inline-block;background:var(--accent-soft);color:var(--ink);font-size:.88rem;font-weight:500;padding:.1rem .55rem;border-radius:3px;margin-top:.25rem}
 .year{font-family:var(--serif);font-size:1.15rem;color:var(--accent);margin:1.6rem 0 0}
-.plain{list-style:none;margin:0;padding:0}
-.plain li{padding:.55rem 0}
-.plain .d{color:var(--muted);font-size:.95rem;display:block}
+.plain li{padding:.5rem 0}
+.tl li{position:relative;padding:0 0 1.4rem 1.4rem;border-left:2px solid var(--line)}
+.tl li::before{content:"";position:absolute;left:-6px;top:.45rem;width:10px;height:10px;border-radius:50%;background:var(--accent)}
+.tl ul{margin:.3rem 0 0;padding-left:1.1rem}
+.tl li li{border:0;padding:0;position:static}
+.tl li li::before{display:none}
 footer{padding:2rem 0 3rem;color:var(--muted);font-size:.92rem;border-top:1px solid var(--line)}
 </style>
 </head>
 <body>
 <header class="nav"><div class="wrap">
   <strong>Elena Koung</strong>
-  <a href="#research">Research</a><a href="#publications">Publications</a><a href="#talks">Talks</a><a href="#about">About</a><a href="#links">Links</a>
+  <a href="#research">Research</a><a href="#publications">Publications</a><a href="#talks">Talks</a><a href="#experience">Experience</a><a href="#honors">Honors</a><a href="#personal">Personal</a><a href="#contact">Contact</a>
 </div></header>
 
 <main class="wrap">
 <div class="hero">
-  <h1>Elena Koung</h1>
-  <p class="zh" lang="zh">孔繁瑄</p>
-  <p class="role">PhD Student, The Pennsylvania State University</p>
-  <p class="lede">I study youth and Discord, online safety, toxicity in games, and gender and sexism in games.</p>
+  <div>
+    <h1>Elena Koung</h1>
+    <p class="zh" lang="zh">孔繁瑄</p>
+    <p class="role">HCI PhD Student · UX Researcher<br>Informatics, College of Information Sciences and Technology, The Pennsylvania State University</p>
+    <p class="lede">I study youth and Discord, online safety, toxicity in games, and gender and sexism in games.</p>
+    <ul class="quick">
+      <li><a href="https://sites.psu.edu/elenakoung/files/2026/01/ElenaK_CV2025-1.pdf">CV (PDF)</a></li>
+      <li><a href="https://scholar.google.com/citations?user=aCeNyEQAAAAJ&hl=en">Google Scholar</a></li>
+      <li><a href="https://www.linkedin.com/in/elenakoung/">LinkedIn</a></li>
+      <li><a href="https://x.com/settintiaras">X</a></li>
+      <li><a href="mailto:elenakoung@psu.edu">elenakoung@psu.edu</a></li>
+    </ul>
+  </div>
+  <img src="https://sites.psu.edu/elenakoung/files/2025/10/ELENA_KOUNG_SAB-Headshot_25-26-300x300.jpg" alt="Headshot of Elena Koung" width="144" height="144">
 </div>
+
+<section id="about">
+  <h2>About</h2>
+  <p>I am an Informatics PhD student at Penn State, advised by Yubo Kou, and a member of the <a href="https://sites.psu.edu/healthandplay/">Health and Play Lab</a>. I specialize in human-computer interaction (HCI), online communities, and digital safety. My research looks at the intersection of technology, design, and human behavior to promote safety in gaming environments.</p>
+  <p>My most recent work includes interviews about <a href="https://dl.acm.org/doi/10.1145/3748610">women's experiences with gendered toxicity</a> in competitive gaming.</p>
+  <p>I earned a Bachelor's degree in Mathematics from The University of Texas at Austin. My undergraduate honors thesis for the Polymathic Scholars Honors Program was <em>A Case Study of Glocalization: Boba Tea and Digital Food Culture</em>, and I still have an interest in Asian American food and digital communities.</p>
+</section>
 
 <section id="research">
   <h2>Research areas</h2>
@@ -90,43 +120,42 @@ footer{padding:2rem 0 3rem;color:var(--muted);font-size:.92rem;border-top:1px so
 
 <section id="publications">
   <h2>Publications</h2>
-  <p class="v" style="margin:0 0 .5rem">Newest first. Full list and citation counts on <a href="https://scholar.google.com/citations?user=aCeNyEQAAAAJ&hl=en">Google Scholar</a>.</p>
+  <p class="v" style="margin:0 0 .5rem">Newest first. Citation counts are on <a href="https://scholar.google.com/citations?user=aCeNyEQAAAAJ&hl=en">Google Scholar</a>.</p>
 
   <p class="year">2026</p>
   <ul class="pub">
     <li>
       <div class="t">Gaming Together on Discord: Teen Gamer's Cross-Platform Practices</div>
-      <div><strong>E Koung</strong>, X Gui, Y Kou</div>
-      <div class="v">Proceedings of the ACM on Human-Computer Interaction 10 (7), 1-34</div>
+      <div><strong>Elena Koung</strong>, Xinning Gui, Yubo Kou</div>
+      <div class="v">Proceedings of the ACM on Human-Computer Interaction 10 (7)</div>
       <!-- TODO: add DOI / PDF link -->
     </li>
     <li>
       <div class="t">“I usually profit because I know when to stop”: Understanding Teenagers' Risk Perception and Mitigation Strategies of Gambling from Reddit</div>
-      <div>Y Liu, <strong>E Koung</strong>, Q Song, Y Kou, X Gui</div>
-      <div class="v">Proceedings of the ACM on Human-Computer Interaction 10 (2), 1-34</div>
+      <div>Yunhan Liu, <strong>Elena Koung</strong>, Qiurong Song, Yubo Kou, Xinning Gui</div>
+      <div class="v">Proceedings of the ACM on Human-Computer Interaction 10 (2) · CSCW</div>
       <!-- TODO: add DOI / PDF link -->
     </li>
     <li>
       <div class="t">Player Safety by Design: Co-Designing Child-Centered Safety Mechanisms with Children</div>
-      <div>Z Zhang, Q Song, RH Hernandez, Y Liu, <strong>E Koung</strong>, J Yu, S Bai, Y Kou, et al.</div>
-      <div class="v">Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems</div>
-      <!-- TODO: confirm full author list, add DOI / PDF link -->
+      <div>Zinan Zhang, Qiurong Song, Lindy Hernandez, Yunhan Liu, <strong>Elena Koung</strong>, Junnan Yu, Sunhye Bai, Yubo Kou, Xinning Gui</div>
+      <div class="v">Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems (CHI '26)</div>
+      <!-- TODO: add DOI / PDF link -->
     </li>
     <li>
       <div class="t">Teen Vigilance: Navigating Risky Social Interactions on Discord</div>
-      <div><strong>E Koung</strong>, Y Liu, Z Zhang, X Gui, Y Kou</div>
-      <div class="v">CHI '26: Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems</div>
-      <!-- TODO: add DOI / PDF link -->
+      <div><strong>Elena Koung</strong>, Yunhan Liu, Zinan Zhang, Xinning Gui, Yubo Kou</div>
+      <div class="v">Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems (CHI '26), April 13–17, 2026, Barcelona, Spain · ACM, 22 pages · <a href="https://doi.org/10.1145/3772318.3790781">DOI</a></div>
     </li>
   </ul>
 
   <p class="year">2025</p>
   <ul class="pub">
     <li>
-      <div class="t">Gendered toxicity in competitive gaming: Women's perceptions and responses</div>
-      <div><strong>E Koung</strong>, Z Zhang, X Gui, Y Kou</div>
-      <div class="v">Proceedings of the ACM on Human-Computer Interaction 9 (6), 415-446</div>
-      <!-- TODO: add DOI / PDF link -->
+      <div class="t">Gendered Toxicity in Competitive Gaming: Women's Perceptions and Responses</div>
+      <div><strong>Elena Koung</strong>, Zinan Zhang, Xinning Gui, Yubo Kou</div>
+      <div class="v">CHI PLAY 2025 · Proceedings of the ACM on Human-Computer Interaction 9 (6), October 2025, 32 pages · <a href="https://dl.acm.org/doi/10.1145/3748610">DOI</a></div>
+      <span class="badge">Best Paper Honorable Mention</span>
     </li>
   </ul>
 
@@ -134,8 +163,8 @@ footer{padding:2rem 0 3rem;color:var(--muted);font-size:.92rem;border-top:1px so
   <ul class="pub">
     <li>
       <div class="t">A Case Study of Glocalization: Boba Tea and Digital Food Culture</div>
-      <div><strong>E Koung</strong></div>
-      <!-- TODO: add venue and link -->
+      <div><strong>Elena Koung</strong></div>
+      <div class="v">Undergraduate honors thesis, Polymathic Scholars Honors Program, The University of Texas at Austin</div>
     </li>
   </ul>
 </section>
@@ -145,38 +174,124 @@ footer{padding:2rem 0 3rem;color:var(--muted);font-size:.92rem;border-top:1px so
   <h3>Talks</h3>
   <ul class="plain">
     <li>Gendered Toxicity in Competitive Gaming
-      <span class="d">Podcast, Esports Research Network, May 2026 · <a href="https://www.youtube.com/watch?v=dFeIwfH5HJQ">Watch</a></span></li>
+      <span class="d">Podcast, Esports Research Network · May 2026 · <a href="https://www.youtube.com/watch?v=dFeIwfH5HJQ">Watch</a></span></li>
     <li>Gendered Toxicity in Competitive Gaming: Women's Perception and Responses
-      <span class="d">Invited talk, Games UR Speaker Summit, Games User Research SIG, December 2025 · <a href="https://www.youtube.com/watch?v=t0YP26NmzD8">Watch</a></span></li>
+      <span class="d">Invited talk, Games UR Speaker Summit, Games User Research SIG · December 2025 · <a href="https://www.youtube.com/watch?v=t0YP26NmzD8">Watch</a></span></li>
     <li>Building Safer Esports Ecosystems
-      <span class="d">Invited talk, Team Liquid, November 2025</span></li>
+      <span class="d">Invited talk, Team Liquid · November 2025</span></li>
   </ul>
   <h3>Posters</h3>
   <ul class="plain">
     <li>Gendered Toxicity in Competitive Gaming: Women's Perception and Responses
-      <span class="d">IST Student Success Showcase, April 2026</span></li>
+      <span class="d">IST Student Success Showcase · April 2026</span></li>
     <li>Teen Vigilance: Navigating Risky Social Interactions on Discord
-      <span class="d">Penn State 2026 Graduate Exhibition, State College, PA, March 2026 · Third Place · <a href="https://gradschool.psu.edu/engagement/graduate-exhibition/2026-graduate-exhibition-award-recipients">Award recipients</a></span></li>
+      <span class="d">Penn State 2026 Graduate Exhibition, State College, PA · March 2026 · Third Place · <a href="https://gradschool.psu.edu/engagement/graduate-exhibition/2026-graduate-exhibition-award-recipients">Award recipients</a></span></li>
+    <li>A Case Study of Glocalization: Boba Tea and Digital Food Culture
+      <span class="d">Longhorn Research Poster Session, Austin, TX · 2022 · Design Award</span></li>
   </ul>
   <h3>Press</h3>
   <ul class="plain">
-    <li>“Il avait le numéro de mes parents” : sur Discord, des adolescents sous emprise forcés à se dénuder ou s'automutiler
-      <!-- TODO: add outlet, date, and link; describe how you appear in it -->
+    <li><a href="https://www.franceinfo.fr/societe/pedocriminalite/enquete-il-avait-le-numero-de-mes-parents-sur-discord-des-adolescents-sous-emprise-forces-a-se-denuder-ou-s-automutiler_8214980.html">“Il avait le numéro de mes parents” : sur Discord, des adolescents sous emprise forcés à se dénuder ou s'automutiler</a>
+      <span class="d">franceinfo</span>
+      <!-- TODO: add publication date and how you appear in the piece (quoted, interviewed, cited) -->
     </li>
   </ul>
 </section>
 
-<section id="about">
-  <h2>About</h2>
-  <p>I am a PhD student at The Pennsylvania State University. Before research, I worked in the esports industry in a customer success role, with 20+ teams of different sizes, including TSM, Evil Geniuses, and FaZe Clan. I started playing games in elementary school and have played League of Legends for over 10 years, including two years competitively.</p>
+<section id="experience">
+  <h2>Experience</h2>
+  <ul class="tl">
+    <li><div class="t">Graduate Assistant Researcher, Health and Play Lab</div>
+      <div class="v">August 2024 – present</div>
+      <ul>
+        <li>Published peer-reviewed work showing how qualitative insights can shape product design strategy and user experience.</li>
+        <li>Conducted in-depth interviews for published research and turned findings into design recommendations.</li>
+        <li>Applied heuristic evaluation and cognitive walkthrough methods to find usability issues and recommend improvements.</li>
+      </ul></li>
+    <li><div class="t">User Researcher, Savicore</div>
+      <div class="v">September 2023 – June 2024</div>
+      <ul><li>Ran mixed-methods user research (interviews, usability testing, market analysis) and translated findings into product specifications, user stories, and design recommendations.</li></ul></li>
+    <li><div class="t">Data Scientist, Patterns</div>
+      <div class="v">July 2023 – December 2023</div>
+      <ul><li>Applied statistical modeling and machine learning to voice transcription datasets to extract behavioral patterns and generate insights.</li></ul></li>
+    <li><div class="t">Data Scientist and Customer Success Manager, Blinkfire Analytics</div>
+      <div class="v">July 2022 – April 2024</div>
+      <ul>
+        <li>Partnered with Design, Product, Engineering, and Customer Success teams to embed user research into decision-making.</li>
+        <li>Used R to analyze 8+ years of historical data and build a scalable pricing model.</li>
+      </ul>
+      <!-- TODO: the CV bullet about account renewal has a "$XXXK" placeholder. Add real numbers or leave out. --></li>
+    <li><div class="t">Business Analyst and Data Scientist, Evil Geniuses</div>
+      <div class="v">July 2021 – May 2022</div>
+      <ul>
+        <li>Researched out-of-game player performance metrics to prevent burn-out, aid recovery, and optimize performance.</li>
+        <li>Built statistical models in R, Python, and SQL to identify success metrics that affect victory conditions.</li>
+      </ul></li>
+    <li><div class="t">Esports Analyst, The University of Texas at Austin</div>
+      <div class="v">June 2021 – December 2021</div>
+      <ul><li>Designed and benchmarked the university's esports facility and helped set priorities for the project budget.</li></ul></li>
+  </ul>
+  <p class="v">The <a href="https://sites.psu.edu/elenakoung/files/2026/01/ElenaK_CV2025-1.pdf">full CV</a> lists every responsibility.</p>
+
+  <h3>Education</h3>
+  <ul class="plain">
+    <li>Ph.D. in Informatics, Human-Computer Interaction · The Pennsylvania State University, College of Information Sciences and Technology · Advisor: Yubo Kou</li>
+    <li>B.S. and B.A., Mathematics Honors · The University of Texas at Austin, Honors College of Natural Science, Polymathic Scholars Honors Program · Certificates: Applied Statistical Modelling, Evidence &amp; Inquiry</li>
+  </ul>
 </section>
 
-<section id="links">
-  <h2>Links</h2>
+<section id="honors">
+  <h2>Honors, service, and leadership</h2>
+  <h3>Honors and awards</h3>
   <ul class="plain">
+    <li>Best Paper Honorable Mention, CHI PLAY 2025</li>
+    <li>Third Place, Penn State 2026 Graduate Exhibition</li>
+    <li>Funds for Excellence in Graduate Recruiting (FEGR), Penn State · 2024</li>
+    <li>Graham Endowment, Penn State ($3,000) · 2024</li>
+    <li>Jordan Rednor Merit-Based Graduate Studies Scholarship, Penn State ($3,000) · 2024</li>
+    <li>JBL Quantum Changemakers Challenge Grant, 1000 Dreams Fund ($1,500) · 2022 · to amplify the voices of 30 U.S. women students in esports and help jumpstart their careers</li>
+    <li>Longhorn Research Poster Session Design Award, UT Austin ($500) · 2022</li>
+    <li>Polymathic Scholars Honors Program, UT Austin · 2022</li>
+  </ul>
+  <h3>Academic service</h3>
+  <ul class="plain">
+    <li>Peer reviewer, ACM CHI 2026, Full Papers</li>
+    <li>Judge, Penn State Undergraduate Exhibition · 2025</li>
+    <li>Reviewer, ACM CHI 2025, Late-Breaking Works track</li>
+    <li>Peer reviewer, CHI PLAY 2025, Full Papers</li>
+  </ul>
+  <h3>Leadership and outreach</h3>
+  <ul class="plain">
+    <li>Student Advisory Board Member, 1,000 Dreams Fund · 2025 – present</li>
+    <li>Vice President, Graduate Student Association in Information Sciences and Technology · 2025 – present</li>
+    <li>Competitive Manager, Penn State League of Legends Esports · 2024 – 2025</li>
+    <li>Volunteer Mentor, Illinois Esports, University of Illinois Urbana-Champaign · 2022 – 2024</li>
+    <li>Community Manager, UT Austin League of Legends Esports (Longhorn Gaming) · 2020 – 2022</li>
+    <li>Competitive Manager, Competitive Women's Gaming Community · 2021</li>
+    <li>Collegiate Coordinator, Team Solo Mid (TSM) · 2020</li>
+  </ul>
+  <h3>Professional affiliations</h3>
+  <ul class="plain"><li>CRA-WP Grad Cohort for Women and Grad Cohort for IDEALS · 2025 attendee</li></ul>
+</section>
+
+<section id="personal">
+  <h2>Personal</h2>
+  <p>I started playing games in elementary school with Pokémon, and I have played League of Legends for over 10 years, including two years competitively. Some of my gameplay:</p>
+  <ul class="plain">
+    <li><a href="https://twitter.com/settintiaras/status/1511447954086838274">Ahri clip noticed by LegitKorea</a> <span class="d">April 5, 2022</span></li>
+    <li><a href="https://twitter.com/settintiaras/status/1443440793386209284">My first ace</a> <span class="d">September 30, 2021</span></li>
+    <li><a href="https://twitter.com/settintiaras/status/1632519759211249665">My Blitzcrank is pretty clean</a> <span class="d">March 5, 2023</span></li>
+  </ul>
+  <!-- TODO: my old github site also had a "Random/Blog/Rant Style" section for food projects, reviews, and ideas, and the Penn State site has a Blog. Add posts here once pasted. -->
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <ul class="plain">
+    <li><a href="mailto:elenakoung@psu.edu">elenakoung@psu.edu</a></li>
+    <li><a href="https://www.linkedin.com/in/elenakoung/">LinkedIn</a></li>
+    <li><a href="https://x.com/settintiaras">X (@settintiaras)</a></li>
     <li><a href="https://scholar.google.com/citations?user=aCeNyEQAAAAJ&hl=en">Google Scholar</a></li>
-    <li><a href="https://sites.psu.edu/elenakoung/">Penn State site</a></li>
-    <!-- TODO: add ORCID, LinkedIn, and a contact email you want public -->
   </ul>
 </section>
 </main>
