@@ -4,8 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>News | Elena Koung</title>
-<meta name="description" content="News from Elena Koung: talks, publications, awards, and press on adverse social interactions in gaming, gendered toxicity, and teen vigilance on Discord and online safety.">
-<link rel="icon" type="image/png" href="favicon.png" sizes="any">
+<meta name="description" content="News from Elena Koung: talks, publications, awards, and press on youth and Discord, online safety, and toxicity in games.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
@@ -58,6 +57,11 @@ h3{font-size:1.02rem;font-weight:600;margin:1.6rem 0 .3rem}
 .plain li{padding:.5rem 0}
 .news li{padding:.8rem 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:7.5rem 1fr;gap:1rem}
 .news li:last-child{border-bottom:0}
+.news .pts{margin:0;padding-left:1.4rem}
+.news .pts li{display:list-item;grid-template-columns:none;padding:.45rem 0;border-bottom:1px dashed var(--line)}
+.news .pts li:first-child{padding-top:0}
+.news .pts li:last-child{border-bottom:0;padding-bottom:0}
+.news .pts li::marker{color:var(--accent);font-weight:600}
 .news time{color:var(--accent);font-weight:600;font-size:.95rem}
 @media (max-width:34rem){.news li{grid-template-columns:1fr;gap:.1rem}}
 .tl li{position:relative;padding:0 0 1.4rem 1.4rem;border-left:2px solid var(--line)}
@@ -80,17 +84,30 @@ footer{padding:2rem 0 3rem;color:var(--muted);font-size:.92rem;border-top:1px so
 </div>
 <section>
   <ul class="plain news">
-  <li><time>November 2026</time><div><em>Gaming Together on Discord</em> published in Proceedings of the ACM on Human-Computer Interaction 10 (7). <a href="https://doi.org/10.1145/3831286">Read the paper</a></div></li>
-  <li><time>Summer 2026</time><div>Interned on Google's People Analytics team in New York City.</div></li>
-  <li><time>May 2026</time><div>Guest on a podcast with the Esports Research Network about gendered toxicity in competitive gaming. <a href="https://www.youtube.com/watch?v=dFeIwfH5HJQ">Watch</a></div></li>
-  <li><time>April 2026</time><div><em>Teen Vigilance</em> appears in the CHI &#39;26 proceedings (April 13–17, Barcelona). <a href="https://doi.org/10.1145/3772318.3790781">Read the paper</a></div></li>
-  <li><time>April 2026</time><div>Presented a poster on gendered toxicity at the IST Student Success Showcase.</div></li>
-  <li><time>March 2026</time><div>Won Third Place at the Penn State 2026 Graduate Exhibition for my <em>Teen Vigilance</em> poster. <a href="https://gradschool.psu.edu/engagement/graduate-exhibition/2026-graduate-exhibition-award-recipients">Award recipients</a></div></li>
-  <li><time>March 2026</time><div>Posted the <em>Teen Vigilance</em> preprint on arXiv. <a href="https://arxiv.org/abs/2603.02052">arXiv</a></div></li>
+  <li><time>November 2026</time><div><ol class="pts">
+      <li><em>Gaming Together on Discord</em> published in <em>Proceedings of the ACM on Human-Computer Interaction</em> 10 (7). <a href="https://doi.org/10.1145/3831286">Read the paper</a></li>
+      <li>Volunteered at CHI PLAY 2026 (November 2–5, York, UK).</li>
+    </ol></div></li>
+  <li><time>August 2026</time><div>Ended my internship on Google’s People Analytics team in New York City. <a href="blog/internship-reflections.html">Read my internship reflections</a></div></li>
+  <li><time>May 2026</time><div><ol class="pts">
+      <li>Began an internship on Google’s People Analytics team in New York City.</li>
+      <li>Guest on a podcast with the Esports Research Network about gendered toxicity in competitive gaming. <a href="https://www.youtube.com/watch?v=dFeIwfH5HJQ">Watch</a></li>
+    </ol></div></li>
+  <li><time>April 2026</time><div><ol class="pts">
+      <li><em>Teen Vigilance</em> appears in the CHI &#39;26 proceedings (April 13–17, Barcelona). <a href="https://doi.org/10.1145/3772318.3790781">Read the paper</a></li>
+      <li>Presented a poster on gendered toxicity at the IST Student Success Showcase.</li>
+      <li>Volunteered at CHI 2026.</li>
+    </ol></div></li>
+  <li><time>March 2026</time><div><ol class="pts">
+      <li>Won Third Place at the Penn State 2026 Graduate Exhibition for my <em>Teen Vigilance</em> poster. <a href="https://gradschool.psu.edu/engagement/graduate-exhibition/2026-graduate-exhibition-award-recipients">Award recipients</a></li>
+      <li>Posted the <em>Teen Vigilance</em> preprint on arXiv. <a href="https://arxiv.org/abs/2603.02052">arXiv</a></li>
+    </ol></div></li>
   <li><time>January 2026</time><div><em>Teen Vigilance</em> and <em>Player Safety by Design</em> were accepted to CHI 2026.</div></li>
   <li><time>December 2025</time><div>Gave an invited talk on gendered toxicity at the Games UR Speaker Summit, Games User Research SIG. <a href="https://www.youtube.com/watch?v=t0YP26NmzD8">Watch</a></div></li>
-  <li><time>November 2025</time><div>Gave an invited talk, <em>Building Safer Esports Ecosystems</em>, at Team Liquid. <a href="blog/building-safer-esports-ecosystems-team-liquid.html">Read my reflections</a></div></li>
-  <li><time>November 2025</time><div>Our paper on teenagers and gambling on Reddit was accepted to CSCW.</div></li>
+  <li><time>November 2025</time><div><ol class="pts">
+      <li>Gave an invited talk, <em>Building Safer Esports Ecosystems</em>, at Team Liquid. <a href="blog/building-safer-esports-ecosystems-team-liquid.html">Read my reflections</a></li>
+      <li>Our paper on teenagers and gambling on Reddit was accepted to CSCW.</li>
+    </ol></div></li>
   <li><time>October 2025</time><div><em>Gendered Toxicity in Competitive Gaming</em> was published at CHI PLAY 2025 and received a Best Paper Honorable Mention. <a href="https://dl.acm.org/doi/10.1145/3748610">Read the paper</a></div></li>
   </ul>
 </section>
@@ -98,8 +115,9 @@ footer{padding:2rem 0 3rem;color:var(--muted);font-size:.92rem;border-top:1px so
 <section>
   <h2>In the press</h2>
   <ul class="plain">
-    <li><a href="https://www.franceinfo.fr/societe/pedocriminalite/enquete-il-avait-le-numero-de-mes-parents-sur-discord-des-adolescents-sous-emprise-forces-a-se-denuder-ou-s-automutiler_8214980.html">"Il avait le numéro de mes parents" : sur Discord, des adolescents sous emprise forcés à se dénuder ou s'automutiler</a>
-      <span class="d">franceinfo</span>
+    <li><a href="https://www.franceinfo.fr/societe/pedocriminalite/enquete-il-avait-le-numero-de-mes-parents-sur-discord-des-adolescents-sous-emprise-forces-a-se-denuder-ou-s-automutiler_8214980.html">“Il avait le numéro de mes parents” : sur Discord, des adolescents sous emprise forcés à se dénuder ou s'automutiler</a>
+      <span class="d">franceinfo · Interviewed and quoted</span>
+      <!-- TODO: add publication date, e.g. franceinfo · Month YYYY · Interviewed and quoted -->
     </li>
   </ul>
 </section>
